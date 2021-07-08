@@ -1,0 +1,30 @@
+= aexmem: Tracking Standalone API Express memory
+
+== Setup
+
+To add npm-modules to the project run `npm install`
+
+Before starting the server, you need to create a `.env` file in the root folder of the project with the parameters:
+
+====
+app_env::
+Environment name
+
+app_port::
+App server port
+
+aex_host::
+Host name for Standalone API Express
+
+mongo_url::
+URL of MongoDB instance to save memory data
+
+mongo_db::
+Database name for memory data
+
+mongo_coll::
+Collection name for memory data
+====
+
+See also::
+- link:https://appery.io/api-express/[Standalone API Express]
