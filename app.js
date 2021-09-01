@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 const hc = require('./service/http.service');
+const config = require('./service/config.service');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/users', usersRouter);
 // Each tick send http request to API Express
 const TICK = 1000;
 var tick = setInterval(hc.tick, TICK);
+console.log("API Express Host: " + config.aex_host);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

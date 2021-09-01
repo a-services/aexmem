@@ -1,9 +1,10 @@
 const http = require('http');
 const mongo = require('./mongo.service');
+const config = require('./config.service');
 
 function tick() {
     const req = http.get({
-        host: 'northwell.dev.appery.io',
+        host: config.aex_host,
         path: '/apiexpress-api/status/available-memory'
     },
         (res) => {
